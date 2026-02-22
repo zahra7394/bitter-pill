@@ -39,7 +39,7 @@ We investigate online tracking and remarketing on 50 pharmacy websites in five E
    ```
    See `notebooks/ublock/README.md` for details.
 
-4. **Data:** The notebooks expect HAR files from the data collection procedure described in the paper. Place your own HAR files in `har_data/` (or set `BASE_HAR_DIR` in `notebooks/common.py` to your data path). The folder structure should match the expected layout (e.g. per consent mode and experiment mode). We do not publish the study dataset; use your own collected data to run the analysis.
+4. **Data:** The notebooks expect HAR files from the data collection procedure described in the paper. Place your own HAR files in `har_data/` (or set `BASE_HAR_DIR` in `notebooks/common.py` to your data path). The folder structure should match the expected layout (e.g. per consent mode and experiment mode). We do not plan to publish the HAR files collected during the study, as they contain security-sensitive cookies and identifiers associated with the accounts used in our research. If you have any questions, or if your work depends on access to our data, please feel free to reach out to us.
 
 ### Running the notebooks
 
@@ -49,16 +49,16 @@ Start Jupyter from the repo root and open the notebooks under `notebooks/`:
 jupyter notebook notebooks/
 ```
 
-Run the **Setup and data load** cell first in each notebook; it calls `parse_har_files_to_dataframe(BASE_HAR_DIR, ...)` and may take a few minutes. CNAME and other caches (e.g. `cname_cache.json`) are written under `notebooks/` to speed up re-runs.
+Run the **Setup and data load** cell if it is present. The cell calls `parse_har_files_to_dataframe(BASE_HAR_DIR, ...)`, which may take a few minutes depending on the HAR file count. CNAME and other caches (e.g. `cname_cache.json`) are saved under `notebooks/` to speed up re-runs.
 
-**Note:** For **Pixel-Analysis** (hashed PII leak detection), the notebooks use persona details from `PERSONA_DETAILS` in `notebooks/common.py`. The repository ships with placeholders; do not commit real email/phone/address data.
+**Note:** For **Pixel-Analysis** (hashed PII leak detection), the notebooks use persona details from `PERSONA_DETAILS` in `notebooks/common.py`, which currently contains placeholders. 
 
 ---
 
 
 ## Reference
 
-If you use this code or data in your work, please cite our paper:
+If you use this code in your work, please consider citing our paper:
 
 ```bibtex
 @inproceedings{moti2025bitterpill,
