@@ -25,18 +25,19 @@ We investigate online tracking and remarketing on 50 pharmacy websites in five E
 
 ### Installation
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/<your-org>/pharmacy.git
-   cd pharmacy
-   ```
+1. Clone this repository and navigate to the project directory.
 
 2. Install Python dependencies (Python 3.10+):
    ```bash
-   pip install pandas seaborn matplotlib pyyaml tld dnspython
+   pip install -r requirements.txt
    ```
 
-3. For the uBlock Origin core runner, install Node.js and run `npm install` in `notebooks/ublock/` (see `notebooks/ublock/README.md`).
+3. For the uBlock Origin core runner, install [Node.js](https://nodejs.org/) (v18+) and install the npm dependencies:
+   ```bash
+   cd notebooks/ublock
+   npm install
+   ```
+   See `notebooks/ublock/README.md` for details.
 
 4. **Data:** The notebooks expect HAR files from the data collection procedure described in the paper. Place your own HAR files in `har_data/` (or set `BASE_HAR_DIR` in `notebooks/common.py` to your data path). The folder structure should match the expected layout (e.g. per consent mode and experiment mode). We do not publish the study dataset; use your own collected data to run the analysis.
 
