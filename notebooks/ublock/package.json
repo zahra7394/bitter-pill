@@ -1,0 +1,9 @@
+{
+  "name": "pharmacy-ublock-runner",
+  "private": true,
+  "type": "module",
+  "description": "Node runner for uBlock Origin core (tracker detection). Run from notebooks via utils.run_ublock_script().",
+  "dependencies": {
+    "@gorhill/ubo-core": "^0.1.30"
+  }
+}
