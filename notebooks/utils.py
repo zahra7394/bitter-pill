@@ -236,6 +236,7 @@ def extract_req_details_from_har(har_file_path, site_hostname):
                 via_header = ''
                 content_size = 0
                 content_mime_type = ''
+                has_gtm_signature = False
 
             urls.append(
                 (request_url, initiator_type, initiator_urls,
@@ -247,7 +248,7 @@ def extract_req_details_from_har(har_file_path, site_hostname):
     return urls
 
 
-def parse_har_files_to_dataframe(base_dir, test=False, use_cache=False):
+def parse_har_files_to_dataframe(base_dir, test=False, use_cache=True):
     """Parse HAR files in the given directory and return a DataFrame."""
     if use_cache and os.path.exists(REQS_PICKLE):
         return pd.read_pickle(REQS_PICKLE)
