@@ -2,7 +2,7 @@
 
 This repository contains the analysis code and Jupyter notebooks for the paper titled **The Bitter Pill: Tracking and Remarketing on EU Pharmacy Websites**, presented at the **Data Privacy Management Workshop (DPM'25)**, ESORICS Workshops.
 
-**Paper:** [The Bitter Pill: Tracking and Remarketing on EU Pharmacy Websites](https://gunesacar.net/assets/bitter-pill-pharmacy-privacy-dpm-25.pdf) (PDF)
+**Paper:** [The Bitter Pill: Tracking and Remarketing on EU Pharmacy Websites](https://gunesacar.net/papers/bitter-pill-pharmacy-privacy-dpm-25.pdf) (PDF)
 
 We investigate online tracking and remarketing on 50 pharmacy websites in five European countries (DE, FR, ES, IT, NL). By shopping for pregnancy tests and analyzing HAR-captured traffic, we find that personal data and shopping activity are routinely collected by third parties; some sites share product names, emails, and phone numbers even when consent was declined. We identify server-side tagging (SST) and CNAME-based tracking, which can circumvent adblockers and browser protections, and observe retargeted pregnancy-test ads on news sites. Declining consent reduces but does not eliminate data sharing, and consent interfaces often discourage opting out. Overall, the study reveals widespread potential legal violations and evasive tracking on sites that handle highly sensitive health-related data.
 
